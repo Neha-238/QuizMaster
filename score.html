@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMaster - Score</title>
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1Cm6x7o1aIwxGUGMnzW0HsLSh+9mNzx5Tw0w3nZ5pHc7IB/0sFw2i3Rx1OmV5Kp2+Rblj2hHcPhwSjQNkTk9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/score.css" />
+  </head>
+  <body>
+    <div class="container score-container">
+      <div class="card score-card">
+        <h2>Your Score</h2>
+        <p id="score" class="score-text"></p>
+
+        <div class="share-container">
+          <h3>Share your score!</h3>
+          <div class="social-buttons">
+            <button id="share-whatsapp" class="btn social-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+            <button id="share-facebook" class="btn social-btn facebook">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </button>
+            <button id="share-instagram" class="btn social-btn instagram">
+              <i class="fab fa-instagram"></i> Instagram
+            </button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button id="review-btn" class="btn primary-btn">
+            Review Questions
+          </button>
+          <button id="play-again-btn" class="btn primary-btn">
+            Play Again
+          </button>
+        </div>
+
+        <div id="review-container" class="review-container"></div>
+      </div>
+    </div>
+
+    <script src="js/score.js"></script>
+  </body>
+</html>

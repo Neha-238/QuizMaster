@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e1e2f;
+  text-align: center;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Home Page Settings */
+.quiz-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quiz-settings label {
+  font-weight: 500;
+  color: #333;
+}
+
+.quiz-settings select,
+.quiz-settings input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.quiz-settings input[type=number] {
+  width: 100%;
+}
+
+.quiz-settings .btn {
+  margin-top: 10px;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.quiz-settings .btn:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+/* Quiz Page */
+.quiz-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#timer-container {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ff5722;
+  font-size: 1.1rem;
+}
+
+#question-number {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+#question {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  min-height: 60px;
+  line-height: 1.4;
+  transition: opacity 0.3s ease;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#options-container button {
+  background: #f0f4ff;
+  color: #333;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#options-container button:hover {
+  background: #dbe3ff;
+  transform: translateY(-2px);
+}
+
+#options-container button.correct {
+  background: #4caf50 !important;
+  color: #fff;
+}
+
+#options-container button.wrong {
+  background: #f44336 !important;
+  color: #fff;
+}
+
+.quiz-actions {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px; /* pill-shaped container */
+  overflow: hidden;    /* ensures buttons stick together */
+}
+
+/* Next button (primary) */
+#next-btn {
+  flex: 1;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+#next-btn:hover:enabled {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+/* Quit button (secondary) */
+.quit-btn {
+  flex: 1;
+  background: #fff;
+  color: #6a11cb;
+  border: none; /* no border, part of the pill */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+.quit-btn:hover {
+  background: #6a11cb;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Optional: subtle shadow for pill effect */
+.quiz-actions button {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+/* Progress Bar */
+#progress-bar-container {
+  width: 100%;
+  background: #e0e0e0;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #6a11cb;
+  transition: width 0.4s ease;
+}
+
+/* Result */
+#result-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#result-container button {
+  background: #6a11cb;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.hidden { display: none; }

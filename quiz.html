@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizWhiz - Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container quiz-container">
+      <div class="quiz-card">
+        <div id="timer-container">Time Left: <span id="timer">15</span>s</div>
+
+        <div id="question-number"></div>
+        <div id="question"></div>
+        <div id="options-container"></div>
+
+        <div class="quiz-actions">
+          <button id="next-btn" class="btn">Next</button>
+          <button id="skip-btn" class="btn quit-btn">Skip</button>
+          <button id="quit-btn" class="btn quit-btn">Quit</button>
+        </div>
+
+        <div id="progress-bar-container">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <h2>Your Score</h2>
+        <p id="score"></p>
+        <button
+          id="restart-btn"
+          class="btn"
+          onclick="window.location='index.html'"
+        >
+          Play Again
+        </button>
+        <!-- Share buttons -->
+        <div class="share-container">
+          <h3>Share your score!</h3>
+          <button id="share-whatsapp" class="btn quit-btn">WhatsApp</button>
+          <button id="share-facebook" class="btn quit-btn">Facebook</button>
+          <button id="share-instagram" class="btn quit-btn">Instagram</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
